@@ -29,7 +29,7 @@
   <div class="title-container">
     <div class="overlay"></div>
     <div class="content" style="text-align: center; margin: 20px">
-      <h1>Humanoid–Object Interaction Challenge in Human-Robot-Scene Interaction and Collaboration</h1>
+      <h1>Humanoid–Scene Interaction Challenge in Human-Robot-Scene Interaction and Collaboration</h1>
       <div class="subtitle">
         <a href="https://iccv.thecvf.com/">ICCV 2025</a> Workshop
       </div>
@@ -43,16 +43,16 @@
 
     <div class="section" id="intro">
       <h2>Introduction</h2>
-      <p>In the real world, robots must not only navigate autonomously but also perceive, manipulate, and interact with objects around them, collaborate effectively with humans, and adapt to dynamic scene layouts. This human–object interaction ability—grounded in physical contact, motion understanding, and environmental awareness—is central to the next generation of robotic perception and control systems.</p>
-      <p>To transition robots from controlled laboratory settings into real-world indoor environments, they must be capable of reliably and safely recognizing, grasping, transporting, and interacting with diverse objects of varying shapes, materials, and semantics—ultimately becoming intelligent and helpful collaborators in daily human life.</p>
-      <p>As a key component of the <a href="https://human-robot-scene.github.io/">Human–Robot–Scene Interaction and Collaboration Workshop @ICCV2025</a>, this Humanoid–Object Interaction Challenge aims to drive innovation and benchmark progress in this essential capability. We provide a simulation-ready 3D object dataset, a real-robot testing platform, and open-source perception and control baselines—empowering participants to develop more intelligent and robust interactive humanoid agents.</p>
+      <p>In the real world, robots must not only navigate autonomously but also perceive and manipulate the state of objects around them, collaborate with humans, and adapt to dynamically changing scene layouts. This human–object–scene interaction capability represents one of the core challenges in current robotic perception and control research.</p>
+      <p>To move robots from controlled laboratories into complex indoor and outdoor environments, they need to reliably, precisely, and safely perform tasks such as recognition, grasping, transport, and interaction across diverse object shapes, materials, and arrangements—truly becoming effective partners in human–robot collaborative work.</p>
+      <p>As a key component of the <a href="https://human-robot-scene.github.io/">Human–Robot–Scene Interaction and Collaboration Workshop @ICCV2025</a>, this Humanoid–Scene Interaction Challenge aims to accelerate innovation and performance improvements in this vital area. We provide participants with a high‑quality, scene‑level 3D home‑living room dataset in simulation, a real‑robot test platform, and baseline perception &amp; control code—enabling researchers to focus on developing advanced interactive perception and control strategies.</p>
       <p>Our challenge focuses on breakthroughs in the following core capabilities:</p>
       <ul>
-        <li><strong>Interactive Perception &amp; Tracking</strong>: Achieve high-precision perception, contact detection, and motion tracking of humanoid–object interactions under occlusion and clutter in realistic home environments.</li>
-        <li><strong>Object-Centric Interaction Reasoning</strong>: Learn to use object semantics and contextual affordances to guide multi-step interaction sequences that are natural, purposeful, and temporally coherent.</li>
-        <li><strong>Adaptive Task Execution with Static Objects</strong>: Perceive and interact with static objects (e.g., fixed furniture, wall‑mounted controls, immovable appliances), planning and adjusting manipulation strategies in real time to accomplish interaction tasks robustly and reliably.</li>
+        <li><strong>Interactive Perception &amp; Tracking</strong>: Achieve high‑precision detection and temporal tracking of Humanoid–Scene contact relationships and motion states under heavy occlusion and within complex household scenes.</li>
+        <li><strong>Scene‑Level Complex Interaction</strong>: Leverage scene semantics and privileged simulation information to execute multi‑task sequences, ensuring robot actions are natural, fluid, and seamlessly chained.</li>
+        <li><strong>Complex Scene Adaptation</strong>: Perform real‑time perception of scene layout and dynamic obstacles (e.g., furniture blocking paths), and adjust path planning and interaction strategies online to maintain task continuity with built‑in fault tolerance and obstacle avoidance.</li>
       </ul>
-      <p>Through unified data formats, standardized evaluation metrics, and open baselines, the challenge promotes the development of generalizable, sim-to-real transferable humanoid agents capable of socially intelligent interaction in future home, service, and collaborative environments.</p>
+      <p>By providing unified data formats, evaluation protocols, and baseline implementations, this challenge seeks to drive the development of socially aware, collaborative robot systems capable of seamless sim‑to‑real transfer—laying a solid foundation for efficient human‑robot collaboration in future home, service, and manufacturing environments.</p>
     </div>
 
     <section class="video-carousel swiper">
@@ -80,14 +80,14 @@
       <h2>Open Source</h2>
       <p>
         <!-- Our Open-source Terrain Benchmark is accessible in <a href="https://github.com/shiki-ta/Humanoid-Terrain-Bench">this repository</a>. You are required to use this repository to participate in the challenge using whichever robot you have, by default we provided Unitree H1_2、G1 and Fourier GR1T2 training code in Isaac Gym. Customized robots are also welcome, as long as they can be trained in Isaac Gym, but you may provide the Isaac Gym deploy config. -->
-        Our Open-source HOI Benchmark is accessible in <a href="https://github.com/hyangwork01/Humanoid-Object-Interaction-Bench">this repository</a>. You are required to use this repository to participate in the challenge using whichever robot you have, by default we provided Unitree H1_2、G1 and SMPL Humanoid training code in Isaac Lab. Customized robots are also welcome, as long as they can be trained in Isaac Lab, but you may provide the Isaac Lab deploy config.
+        Our Open-source HSI Benchmark is accessible in <a href="https://github.com/hyangwork01/Humanoid-Scene-Interaction-Bench">this repository</a>. You are required to use this repository to participate in the challenge using whichever robot you have, by default we provided Unitree H1_2、G1 and SMPL Humanoid training code in Isaac Lab. Customized robots are also welcome, as long as they can be trained in Isaac Lab, but you may provide the Isaac Lab deploy config.
       </p>
       <h3>Resources</h3>
       <ul>
-        <li><a href="#">Object Datasets</a>: A diverse set of objects available in Isaac Lab, including bed,sofa,chair,box and more.</li>
-        <li><a href="https://github.com/NVlabs/ProtoMotions">Training Platform</a>: A foundational training platform for developing and testing Humanoid Object Interaction policies.</li>
+        <li><a href="#">Scene Suite</a>: A diverse set of scenes available in Isaac Lab, including single‑object interaction scenes, bedrooms, living rooms, and more.</li>
+        <li><a href="https://github.com/NVlabs/ProtoMotions">Training Platform</a>: A foundational training platform for developing and testing locomotion control policies.</li>
         <li><a href="#">Documentation</a>: Comprehensive documentation to guide participants in using the benchmark effectively.</li>
-        <li>Evaluation Metrics: Standardized metrics for assessing interaction performance across different tasks.</li>
+        <li>Evaluation Metrics: Standardized metrics for assessing interaction performance across different scenes.</li>
       </ul>
     </div>
 
@@ -106,19 +106,19 @@
 
     <div class="section" id="tracks">
       <h2>Tracks</h2>
-      <p>We design vary interaction tasks  to evaluate the robot’s performance. All evaluation scenarios are drawn from the provided object dataset.</p>
+      <p>We design interaction tasks of varying difficulty to evaluate the robot’s performance. All evaluation scenarios are drawn from the provided scene dataset.</p>
 
       <ol>
         <li>
-          <strong>Robustness Evaluation:</strong> To assess the robot’s robustness under physical disturbances, we test task execution performance when applying **external force perturbations** of varying magnitude and direction. This evaluation examines whether the robot can maintain stable interaction and complete tasks despite unexpected physical pushes or disturbances.
-          <!-- <div class="img-container">
+          <strong>Robustness Evaluation:</strong> To assess the robot’s robustness, we increase the complexity of the scenes. For example, we add more objects to the existing home scenario to test the robot’s resilience.
+          <div class="img-container">
             <img src="./img/single-obj-scene.png" alt="single-obj-scene for Robustness evaluation">
             <div class="caption">Simple scene interaction for Robustness evaluation</div>
           </div> 
           <div class="img-container">
             <img src="./img/multi-obj-scene.png" alt="multi-obj-scene for Robustness evaluation">
             <div class="caption">Multi scene interaction for Robustness evaluation</div>
-          </div> -->
+          </div>
         </li>
         
         <!-- <li>
@@ -130,71 +130,11 @@
         </li> -->
 
         <li>
-          <strong>Generalization Evaluation:</strong> To evaluate the robot’s ability to generalize across object instances, we assess its interaction performance on **previously unseen objects of the same category**. This tests whether the model can adaptively and coherently interact with new object instances within the learned category, without retraining or fine-tuning.
+          <strong>Generalization Evaluation:</strong> To evaluate the generalization ability of the interaction policy, we combine multiple interaction tasks within the same scene and introduce a more diverse set of unseen objects in the original scenes. We require the robot to adaptively and coherently complete the tasks and interact with these unseen objects, thereby more rigorously measuring its ability to handle unseen or mixed environments.
         </li>
       </ol>
-    </div>  
-
-
-    <div class="section" id="tracks">
-      <h2>Tasks</h2>
-      <p>The Humanoid–Object Interaction Challenge defines the following six interaction tasks, with success criteria for each:</p>
-    
-      <ol>
-        <li>
-          <strong>Lie:</strong>
-          The pelvis, ankles, and head must remain on the bed surface for at least 0.3 s, fully within the bed area in a bird’s‑eye view; the head height must be between [H, H+0.4 m], where H is the bed height.
-          <div class="img-container">
-            <img src="./img/lie_down21_bed_01.png" alt="Lie on a bed">
-            <div class="caption">Lie on a bed</div>
-          </div>
-        </li>
-        <li>
-          <strong>Push:</strong>
-          The box’s center of mass must be within 0.1 m of the target point and hold that position for at least 0.5 s.
-          <div class="img-container">
-            <img src="./img/walk_with_box_cabinet_01.png" alt="Push a Box">
-            <div class="caption">Push a box</div>
-          </div>
-        </li>
-        <li>
-          <strong>Touch:</strong>
-          The end‑effector (hand) must reach within 1 cm of the target point and make contact within 1 s.
-          <div class="img-container">
-            <img src="./img/xxx.png" alt="Touch a point">
-            <div class="caption">Touch a point</div>
-          </div>
-        </li>
-        <li>
-          <strong>Lift:</strong>
-          The box must be lifted by at least 0.2 m, and in the final frame both wrist joints must remain within 0.1 m of the box surface.
-          <div class="img-container">
-            <img src="./img/walk_to_pick_up_box_box_04.png" alt="Lift a box">
-            <div class="caption">Lift a box</div>
-          </div>
-        </li>
-        <li>
-          <strong>Sit:</strong>
-          The pelvis joint must lie within the seating area in a bird’s‑eye view, at a height between [H, H+0.27 m] (H = seat height), and sustain that pose for at least 0.3 s.
-          <div class="img-container">
-            <img src="./img/chair_mo005_chair_04.png" alt="Sit on a chair">
-            <div class="caption">Sit On a chair</div>
-          </div>
-        </li>
-        <li>
-          <strong>Claw:</strong>
-          At grasp start, the box must sit at least 0.1 m above the table, with both wrists within 0.1 m of the box surface;
-          After placement, the box’s center of mass must be within 0.1 m of the target and maintain that for at least 0.5 s.
-          <div class="img-container">
-            <img src="./img/xxx.png" alt="Claw a box">
-            <div class="caption">Claw a box</div>
-          </div>
-        </li>
-      </ol>
-    </div>
-    
-    
-      <!-- <div class="terrain-grid">
+      
+      <div class="terrain-grid">
         <div class="terrain-item">
           <div class="img-container">
             <img src="./img/room1.png" alt="Living room 1">
@@ -242,7 +182,7 @@
           </div>
         </div>
 
-      </div> -->
+      </div>
       
     
     <!-- <div class="section" id="call">
@@ -317,8 +257,6 @@
       <p>© Multi-Scenarios Humanoid Locomotion Challenge in Human-Robot-Scene Interaction and Collaboration Workshop @ICCV2025</p>
     </footer>
   </div>
-
-  
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const videoSwiper = new Swiper('.video-carousel', {
