@@ -133,7 +133,44 @@
           <strong>Generalization Evaluation:</strong> To evaluate the robot’s ability to generalize across object instances, we assess its interaction performance on **previously unseen objects of the same category**. This tests whether the model can adaptively and coherently interact with new object instances within the learned category, without retraining or fine-tuning.
         </li>
       </ol>
-      
+    </div>  
+
+
+    <div class="section" id="tracks">
+      <h2>Tasks</h2>
+      <p>The Humanoid–Object Interaction Challenge defines the following six interaction tasks, with success criteria for each:</p>
+    
+      <ol>
+        <li>
+          <strong>Lie in Bed:</strong>
+          The pelvis, ankles, and head must remain on the bed surface for at least 0.3 s, fully within the bed area in a bird’s‑eye view; the head height must be between [H, H+0.4 m], where H is the bed height.
+        </li>
+        <li>
+          <strong>Push:</strong>
+          The box’s center of mass must be within 0.1 m of the target point and hold that position for at least 0.5 s.
+        </li>
+        <li>
+          <strong>Touch:</strong>
+          The end‑effector (hand) must reach within 1 cm of the target point and make contact within 1 s.
+        </li>
+        <li>
+          <strong>Lift:</strong>
+          The box must be lifted by at least 0.2 m, and in the final frame both wrist joints must remain within 0.1 m of the box surface.
+        </li>
+        <li>
+          <strong>Sit:</strong>
+          The pelvis joint must lie within the seating area in a bird’s‑eye view, at a height between [H, H+0.27 m] (H = seat height), and sustain that pose for at least 0.3 s.
+        </li>
+        <li>
+          <strong>Claw:</strong>
+          <ul>
+            <li>At grasp start, the box must sit at least 0.1 m above the table, with both wrists within 0.1 m of the box surface;</li>
+            <li>After placement, the box’s center of mass must be within 0.1 m of the target and maintain that for at least 0.5 s.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    
       <!-- <div class="terrain-grid">
         <div class="terrain-item">
           <div class="img-container">
@@ -257,6 +294,8 @@
       <p>© Multi-Scenarios Humanoid Locomotion Challenge in Human-Robot-Scene Interaction and Collaboration Workshop @ICCV2025</p>
     </footer>
   </div>
+
+  
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const videoSwiper = new Swiper('.video-carousel', {
