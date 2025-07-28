@@ -96,11 +96,19 @@
       </p>
       <h3>Resources</h3>
       <ul>
-        <li><a href="#">Object Datasets</a>: A diverse set of objects available in Isaac Lab, including bed,sofa,chair,box and more.</li>
-        <li><a href="https://github.com/NVlabs/ProtoMotions">Training Platform</a>: A foundational training platform for developing and testing Humanoid Object Interaction policies.</li>
-        <li><a href="#">Documentation</a>: Comprehensive documentation to guide participants in using the benchmark effectively.</li>
+        <li><a href="https://drive.google.com/file/d/1mgHx_btvx3RCnA_3CYdAAl_5_qKf5jzs/view?usp=sharing">Object Datasets</a>: A diverse set of objects available in Isaac Lab, including bed,sofa,chair,box and more.</li>
+        <li><a href="https://github.com/CurMack/HOIBench">Training Platform</a>: A foundational training platform for developing and testing Humanoid Object Interaction policies.</li>
+        <li><a href="https://github.com/CurMack/HOIBench/blob/master/README.md">Documentation</a>: Comprehensive documentation to guide participants in using the benchmark effectively.</li>
         <li>Evaluation Metrics: Standardized metrics for assessing interaction performance across different tasks.</li>
       </ul>
+      <h3>Reference Papers</h3>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2503.19901">TokenHSI: Unified Synthesis of Physical Human-Scene Interactions through Task Tokenization</a></li>
+          <li><a href="https://arxiv.org/pdf/2309.07918">Unified Human-Scene Interaction via Prompted Chain-of-Contacts</a></li>
+          <li><a href="https://arxiv.org/pdf/2412.17730">Mimicking-Bench: A Benchmark for Generalizable Humanoid-Scene Interaction Learning via Human Mimicking</a></li>
+          
+
+        </ul>
     </div>
 
     <div class="section" id="rules">
@@ -151,179 +159,74 @@
     <div class="section" id="tracks">
       <h2>Tasks</h2>
       <p>The Humanoid–Object Interaction Challenge defines the following six interaction tasks, with success criteria for each:</p>
-    
+
+      <div class="img-container">
+        <img src="./img/total.jpg" alt="single-obj-scene for Robustness evaluation">
+        <div class="caption">Simple object interaction tasks</div>
+      </div> 
+
       <ol>
         <li>
           <strong>Lie:</strong>
           The pelvis, ankles, and head must remain on the bed surface for at least 0.3 s, fully within the bed area in a bird’s‑eye view; the head height must be between [H, H+0.4 m], where H is the bed height.
-          <div class="img-container">
-            <img src="./img/lie_down21_bed_01.png" alt="Lie on a bed">
-            <div class="caption">Lie on a bed</div>
-          </div>
         </li>
         <li>
           <strong>Push:</strong>
           The box’s center of mass must be within 0.1 m of the target point and hold that position for at least 0.5 s.
-          <div class="img-container">
-            <img src="./img/walk_with_box_cabinet_01.png" alt="Push a Box">
-            <div class="caption">Push a box</div>
-          </div>
         </li>
         <li>
           <strong>Touch:</strong>
           The end‑effector (hand) must reach within 1 cm of the target point and make contact within 1 s.
-          <div class="img-container">
-            <img src="./img/xxx.png" alt="Touch a point">
-            <div class="caption">Touch a point</div>
-          </div>
         </li>
         <li>
           <strong>Lift:</strong>
           The box must be lifted by at least 0.2 m, and in the final frame both wrist joints must remain within 0.1 m of the box surface.
-          <div class="img-container">
-            <img src="./img/walk_to_pick_up_box_box_04.png" alt="Lift a box">
-            <div class="caption">Lift a box</div>
-          </div>
         </li>
         <li>
           <strong>Sit:</strong>
           The pelvis joint must lie within the seating area in a bird’s‑eye view, at a height between [H, H+0.27 m] (H = seat height), and sustain that pose for at least 0.3 s.
-          <div class="img-container">
-            <img src="./img/chair_mo005_chair_04.png" alt="Sit on a chair">
-            <div class="caption">Sit On a chair</div>
-          </div>
         </li>
         <li>
           <strong>Claw:</strong>
           At grasp start, the box must sit at least 0.1 m above the table, with both wrists within 0.1 m of the box surface;
           After placement, the box’s center of mass must be within 0.1 m of the target and maintain that for at least 0.5 s.
-          <div class="img-container">
-            <img src="./img/xxx.png" alt="Claw a box">
-            <div class="caption">Claw a box</div>
-          </div>
         </li>
       </ol>
     </div>
     
-    
-      <!-- <div class="terrain-grid">
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room1.png" alt="Living room 1">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room2.png" alt="Living room 2">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room3.png" alt="Living room 3">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room4.png" alt="Living room 4">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room9bed.png" alt="Bed room 9">
-          </div>
-        </div>
-
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room5.png" alt="Living room 5">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room6.png" alt="Living room 6">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room7.png" alt="Living room 7">
-          </div>
-        </div>
-        <div class="terrain-item">
-          <div class="img-container">
-            <img src="./img/room8.png" alt="Living room 8">
-          </div>
-        </div>
-
-      </div> -->
-      
-    
-    <!-- <div class="section" id="call">
-      <h2>Call for Papers</h2>
-      <p>
-        We invite submissions of <strong>long papers</strong> (up to 8 pages excluding references) and <strong>short papers</strong> (up to 4 pages excluding references) that explore cutting-edge research in multi-terrain humanoid locomotion.
-      </p>
-
-      <h3>Paper Topics</h3>
-      <p>
-        Topics of interest include, but are not limited to:
-      </p>
-      
-      <div class="call-topics">
-        <div class="topic-card">
-          <h4>Multi-Terrain Locomotion</h4>
-          <p>Control strategies for navigating diverse terrains including slopes, stairs, rubble, and uneven surfaces</p>
-        </div>
-        
-        <div class="topic-card">
-          <h4>Adaptive Control</h4>
-          <p>Real-time adaptation to changing terrain conditions and unexpected disturbances</p>
-        </div>
-        
-        <div class="topic-card">
-          <h4>Simulation to Reality</h4>
-          <p>Transfer learning approaches for bridging the sim-to-real gap in locomotion</p>
-        </div>
-        
-        <div class="topic-card">
-          <h4>Energy Efficiency</h4>
-          <p>Optimizing power consumption while maintaining stability on challenging terrains</p>
-        </div>
-        
-        <div class="topic-card">
-          <h4>Learning Frameworks</h4>
-          <p>Reinforcement learning, imitation learning, and hybrid approaches for locomotion</p>
-        </div>
-        
-        <div class="topic-card">
-          <h4>Benchmarking & Metrics</h4>
-          <p>Standardized evaluation protocols for multi-terrain locomotion performance</p>
-        </div>
+    <div class="section" id="reorganizers">
+      <h2>organizers</h2>
+      <div class="people">
+        <a href="https://reorg1.example.com" target="_blank">
+          <img src="./img/chair_mo005_chair_04.png" alt="organizer 1">
+          <div>Organizer 1</div>
+          <div class="affiliation">Affiliation A</div>
+        </a>
+        <a href="https://reorg2.example.com" target="_blank">
+          <img src="assets/reorg2.jpg" alt="Re‑organizer 2">
+          <div>Organizer 2</div>
+          <div class="affiliation">Affiliation B</div>
+        </a>
+        <!-- …add more re‑organizers as needed… -->
       </div>
-
-      <div class="important-dates">
-        <h3>Important Dates</h3>
-        <div class="date-item">
-          <div class="date-label">Paper Submission:</div>
-          <div>Waiting to decide</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Notification to Authors:</div>
-          <div>Waiting to decide</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Camera-Ready Deadline:</div>
-          <div>Waiting to decide</div>
-        </div>
-        <div class="date-item">
-          <div class="date-label">Workshop Date:</div>
-          <div>Waiting to decide</div>
-        </div>
+    </div>
+    <div class="section" id="sponsors">
+      <h2>Sponsors</h2>
+      <div class="people">
+        <a href="https://sponsor1.example.com" target="_blank">
+          <img src="assets/sponsor1_logo.png" alt="Sponsor 1 Logo">
+          <div>Sponsor 1</div>
+          <div class="affiliation">Gold Level</div>
+        </a>
+        <a href="https://sponsor2.example.com" target="_blank">
+          <img src="assets/sponsor2_logo.png" alt="Sponsor 2 Logo">
+          <div>Sponsor 2</div>
+          <div class="affiliation">Silver Level</div>
+        </a>
+        <!-- …add more sponsors as needed… -->
       </div>
-
-      <h3>Submission Guidelines</h3>
-      <p>All submissions must be in PDF format and follow the official ICCV 2025 template. Papers should be submitted through the <a href="#">CMT submission system</a> by the specified deadline.</p>
-      <p>As a dedicated sub-area within the Human-Robot-Scene Interaction and Collaboration Workshop @ICCV2025, accepted papers will be presented at the workshop and included in the proceedings.</p>
-    </div> -->
+    </div>
+  
 
     <footer>
       <p>© Multi-Scenarios Humanoid Locomotion Challenge in Human-Robot-Scene Interaction and Collaboration Workshop @ICCV2025</p>

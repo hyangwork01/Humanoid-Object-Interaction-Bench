@@ -363,18 +363,23 @@ height: auto;
 object-fit: cover;        /* 保持视频宽高比并填充容器 :contentReference[oaicite:9]{index=9} */
 }
 
-/* .video-carousel {
---swiper-inactive-slide-scale: 0.5;
---swiper-inactive-slide-opacity: 0.6;
-}
-
-.video-carousel .swiper-slide {
-transform: scale(var(--swiper-inactive-slide-scale));
-opacity:    var(--swiper-inactive-slide-opacity);
-transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.video-carousel .swiper-slide-active {
-transform: scale(1) !important;
-opacity:    1    !important;
-} */
+/* Organizers：头像始终 120×120px 的正圆 */
+#reorganizers .people a img {
+    width: 120px;             /* 宽度 = 高度 */
+    height: 120px;            /* 固定高度 */
+    object-fit: cover;        /* 裁剪填充，避免变形 */
+    border-radius: 50%;       /* 正圆 */
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  
+  /* Sponsors：如果要圆形 logo，同样保持宽高相同； 
+     若要矩形 logo，可按需覆盖为宽 auto、高固定 */
+  #sponsors .people a img {
+    /* 若想保持圆形，则也写成 width:120px; height:120px; border-radius:50%; */
+    /* 如果想矩形保持原宽高，则可移除或重写为： */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  
