@@ -102,7 +102,7 @@
 
       <div class="subsection">
         <h3>Registration</h3>
-        <p>All participant teams need to register by emailing <b style="color: green;">xxx@outlook.com</b> with team information. You will recieve an unique token for evaluating your solution.</p>
+        <p>All participant teams need to register by emailing <b style="color: green;">iccv2025-hoi@outlook.com</b> with team information. You will recieve an unique token for evaluating your solution.</p>
         <div class="highlight-box">
           <strong>Registration template</strong>
           <p><i>Subject</i>: [ICCV2025-HRSIC]Humanoid–Object Interaction Registration</p>
@@ -136,8 +136,10 @@
 
       <div class="subsection">
         <h3><b style="color: red">🏆 Awards</b></h3>
+        <img src="./img/deemos.jpeg" alt="Deemos Logo" class="sponsor-logo">
         <p>
-          🥇 First Prize ($xxx) 🥈 Second Prize ($xxx) 🥉 Third Prize ($xxx)
+          Thanks to our sponsors at <a href="https://hyper3d.ai/?ref=openi.cn&lang=zh">Deemos</a>:
+          🥇 First Prize ($1000) 🥈 Second Prize ($500) 🥉 Third Prize ($300)
         </p>
         <div class="highlight-box">
           <b>Participants need to open-source their code to be eligible for awards.</b> However, you can still participate in the challenge without open-sourcing your code. If you want to change your initial response regarding open-sourcing your code, please contact us.
@@ -155,17 +157,16 @@
         <h4><b>Input (Observation Space)</b></h4>
         <p>The policy will receive the following observations at each timestep:</p>
         <ul>
-          <li>Joint positions and velocities ([joint_details])</li>
-          <li>Base orientation and angular velocity ([base_orientation_details])</li>
-          <li>Terrain height samples around the robot ([obj_obs])</li>
-          <li>Previous action values ([action_history_details])</li>
+          <li>Agent self state: joint positions & velocities,  base orientation & angular velocity ([self_obs])</li>
+          <li>Object state: bounding box dimensions, center position, and root‐node rotation ([obj_obs])</li>
+          <li>Previous action values ([historical_self_obs])</li>
         </ul>
         <p>Complete observation specifications will be provided in <a href="https://github.com/CurMack/HOIBench">our challenge repo</a>. <strong style="color: red">Stay tuned!</strong></p>
 
         <h4><b>Output (Action Space)</b></h4>
         <p>Your policy must output:</p>
         <ul>
-          <li>Target joint positions ([joint_target_details])</li>
+          <li>Target joint positions ([actions])</li>
         </ul>
         <div class="highlight-box">
           <strong>Note:</strong> Your policy must align with the provided observation space.
@@ -182,7 +183,6 @@
           <li>SMPL Humanoid</li>
           <!-- <li>Fourier N1</li> -->
         </ul>
-        You can start with any robot to participate in the challenge. To encourage the development of general algorithms, we will compare the scores across all robots. The more robots your algorithm works on, the higher your score will be.
       </div>
 
       <h3>Test Tasks</h3>
@@ -190,11 +190,10 @@
       <ol>
         <li>
           <strong>Robustness Evaluation:</strong>
-          To assess the agent’s stability under <b>external force perturbations</b> of varying magnitude and direction, we introduce random pushes during task execution. Successful policies must maintain contact and complete the interaction (e.g., lie, push, lift, sit) despite these unexpected disturbances.(Task weight = xxx)
-        </li>
+          Robustness Evaluation: To assess the agent’s stability under varied object placements, objects are spawned at random positions around the agent at the start of each trial. Successful policies must locate, approach, and complete the interaction (e.g., lie, push, lift, sit) despite these randomized object positions. (Task weight = 0.7)
         <li>
           <strong>Generalization Evaluation:</strong>
-          To measure adaptability, agents are tested on <b>previously unseen object instances</b> from the same category. This ensures the policy can coherently interact with new bed, box, or chair models without any additional fine‑tuning.(Task weight = xxx)
+          To measure adaptability, agents are tested on <b>previously unseen object instances</b> from the same category. This ensures the policy can coherently interact with new bed, box, or chair models without any additional fine‑tuning.(Task weight = 0.3)
         </li>
 
       </ol>
@@ -227,7 +226,8 @@
       <h2>Open Source</h2>
       <p>
         <!-- Our Open-source Terrain Benchmark is accessible in <a href="https://github.com/shiki-ta/Humanoid-Terrain-Bench">this repository</a>. You are required to use this repository to participate in the challenge using whichever robot you have, by default we provided Unitree H1_2、G1 and Fourier GR1T2 training code in Isaac Gym. Customized robots are also welcome, as long as they can be trained in Isaac Gym, but you may provide the Isaac Gym deploy config. -->
-        Our Open-source HOI Benchmark is accessible in <a href="https://github.com/hyangwork01/Humanoid-Object-Interaction-Bench">this repository</a>. You are required to use this repository to participate in the challenge using whichever robot you have, by default we provided Unitree H1_2、G1 and SMPL Humanoid training code in Isaac Lab. Customized robots are also welcome, as long as they can be trained in Isaac Lab, but you may provide the Isaac Lab deploy config.
+        Our Open-source HOI Benchmark is accessible in <a href="https://github.com/hyangwork01/Humanoid-Object-Interaction-Bench">this repository</a>. 
+        <strong>Only the provided robots—Unitree H1, Unitree G1, and SMPL Humanoid can be used for submissions. Any custom or other robots will not be counted toward the leaderboard score.</strong>
       </p>
       <h3>Resources</h3>
       <ul>
@@ -529,7 +529,7 @@
       <h2>Rules</h2>
       <ol>
         <li><strong>Eligibility:</strong> Participation is open to academic, industry, and independent teams worldwide. Each team may submit only one entry.</li>
-        <li><strong>Robot Requirements:</strong> You may use any simulated humanoid robot compatible with Isaac Lab. Default support is provided for Unitree H1_2, G1, and SMPL Humanoid. Custom robots are welcome but must include deployment configs for Isaac Lab and contact the organizer in advance to adapt the code properly.</li>
+        <li><strong>Robot Requirements:</strong>Only the provided robots—Unitree H1, Unitree G1, and SMPL Humanoid can be used for submissions. Any custom or other robots will not be counted toward the leaderboard score. </li>
         <li><strong>Submission:</strong> Teams must submit both their trained HOI policy and the model inference code according to the provided submission guidelines. All entries must be reproducible.</li>
         <li><strong>Evaluation:</strong> All policies will be evaluated based on the percentage of tasks successfully completed and the time taken to complete them, with faster completions receiving higher scores.</li>
         <li><strong>Fair Play:</strong> Use of cheating techniques, hard-coding the test environment, or exploiting simulator bugs is strictly prohibited.</li>
