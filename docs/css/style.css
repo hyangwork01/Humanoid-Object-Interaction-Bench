@@ -438,12 +438,10 @@ object-fit: cover;        /* 保持视频宽高比并填充容器 :contentRefere
     color: #666;
   }
   
-  /* 专门控制 Deemos Logo 大小 */
+
 .sponsor-logo {
-    width: 150px;     /* 按需调整宽度 */
-    height: auto;     /* 高度自动等比 */
-    display: block;   /* 如果你想让它独占一行 */
-    margin: 5px 0;/* 上下 20px 居中 */
-  }
-  
-  
+width: 150px !important;
+height: auto !important;
+display: block;   /* 如果你想让它独占一行 */
+margin: 5px 0;/* 上下 20px 居中 */
+}
