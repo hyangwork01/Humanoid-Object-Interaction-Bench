@@ -258,31 +258,241 @@
       <h2>Tasks</h2>
       <p>The Humanoid–Object Interaction Challenge defines the following six interaction tasks, with success criteria for each:</p>
 
-      <div class="img-container">
+      <!-- <div class="img-container">
         <img src="./img/total.jpg" alt="single-obj-scene for Robustness evaluation">
         <div class="caption">Simple object interaction tasks</div>
-      </div> 
+      </div>  -->
+
 
       <ol>
         <li>
           <strong>Lie:</strong>
           The pelvis, ankles, and head must remain on the bed surface for at least 0.3 s, fully within the bed area in a bird’s‑eye view; the head height must be between [H, H+0.4 m], where H is the bed height.
+          <section class="image-carousel swiper">
+            <div class="swiper-wrapper">
+              <!-- 每个 slide 放一个 img 和 caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down18_bed_20.png" alt="lie_down18_bed_20.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down21_bed_01.png" alt="lie_down21_bed_01.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down32_bed_05.png" alt="lie_down32_bed_05.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down7_bed_11.png" alt="lie_down7_bed_11.png">
+                </div>
+              </div>
+              <!-- …继续添加更多 slides… -->
+            </div>
+          
+            <!-- 分页器（可选） -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 导航按钮（可选） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </section>
         </li>
         <li>
           <strong>Push:</strong>
           The box’s center of mass must be within 0.1 m of the target point and hold that position for at least 0.5 s.
+          <section class="image-carousel swiper">
+            <div class="swiper-wrapper">
+              <!-- 每个 slide 放一个 img 和 caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/push/walk_with_box_cabinet_01.png" alt="walk_with_box_cabinet_01.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/push/walk_with_box_cabinet_02.png" alt="walk_with_box_cabinet_02.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/push/walk_with_box_cabinet_01.png" alt="walk_with_box_cabinet_01.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/push/walk_with_box_cabinet_02.png" alt="walk_with_box_cabinet_02.png">
+                </div>
+              </div>
+              <!-- <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down32_bed_05.png" alt="lie_down32_bed_05.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down7_bed_11.png" alt="lie_down7_bed_11.png">
+                </div>
+              </div> -->
+              <!-- …继续添加更多 slides… -->
+            </div>
+          
+            <!-- 分页器（可选） -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 导航按钮（可选） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </section>
         </li>
         <li>
           <strong>Touch:</strong>
           The end‑effector (hand) must reach within 1 cm of the target point and make contact within 1 s.
+          <section class="image-carousel swiper">
+            <div class="swiper-wrapper">
+              <!-- 每个 slide 放一个 img 和 caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/touch/touch1.jpg" alt="touch1.jpg">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/touch/touch2.jpg" alt="touch2.jpg">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/touch/touch1.jpg" alt="touch1.jpg">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/touch/touch2.jpg" alt="touch2.jpg">
+                </div>
+              </div>
+
+            </div>
+          
+            <!-- 分页器（可选） -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 导航按钮（可选） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </section> 
         </li>
         <li>
           <strong>Lift:</strong>
           The box must be lifted by at least 0.2 m, and in the final frame both wrist joints must remain within 0.1 m of the box surface.
+          <section class="image-carousel swiper">
+            <div class="swiper-wrapper">
+              <!-- 每个 slide 放一个 img 和 caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/carry/walk_to_pick_up_box_box_02.png" alt="walk_to_pick_up_box_box_02.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/carry/walk_to_pick_up_box_box_04.png" alt="walk_to_pick_up_box_box_04.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/carry/walk_to_pick_up_box_box_02.png" alt="walk_to_pick_up_box_box_02.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/carry/walk_to_pick_up_box_box_04.png" alt="walk_to_pick_up_box_box_04.png">
+                </div>
+              </div>
+              <!-- <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down32_bed_05.png" alt="lie_down32_bed_05.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down7_bed_11.png" alt="lie_down7_bed_11.png">
+                </div>
+              </div> -->
+              <!-- …继续添加更多 slides… -->
+            </div>
+          
+            <!-- 分页器（可选） -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 导航按钮（可选） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </section>       
         </li>
         <li>
           <strong>Sit:</strong>
           The pelvis joint must lie within the seating area in a bird’s‑eye view, at a height between [H, H+0.27 m] (H = seat height), and sustain that pose for at least 0.3 s.
+          <section class="image-carousel swiper">
+            <div class="swiper-wrapper">
+              <!-- 每个 slide 放一个 img 和 caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/chair/chair_mo003_chair_13.png" alt="chair_mo003_chair_13.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/chair/chair_mo005_chair_04.png" alt="chair_mo005_chair_04.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/chair/chair_mo016_chair_19.png" alt="chair_mo016_chair_19.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/chair/chair_mo003_chair_13.png" alt="chair_mo003_chair_13.png">
+                </div>
+              </div>
+              <!-- 如果你有多张图，就复制上面这个 div.swiper-slide，并替换 src/alt/caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/chair/chair_mo005_chair_04.png" alt="chair_mo005_chair_04.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/chair/chair_mo016_chair_19.png" alt="chair_mo016_chair_19.png">
+                </div>
+              </div>
+              <!-- <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down32_bed_05.png" alt="lie_down32_bed_05.png">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/lie/lie_down7_bed_11.png" alt="lie_down7_bed_11.png">
+                </div>
+              </div> -->
+              <!-- …继续添加更多 slides… -->
+            </div>
+          
+            <!-- 分页器（可选） -->
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- 导航按钮（可选） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </section>  
         </li>
         <li>
           <strong>Claw:</strong>
@@ -390,7 +600,34 @@
       }
     });
 
-
+    const imageSwiper = new Swiper('.image-carousel', {
+      loop: true,
+      rewind: false,
+      slidesPerView: 2,
+      centeredSlides: true,
+      spaceBetween: 10,
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+        slideShadows: false,
+        scale: 0.8,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
   </script>
 </body>
