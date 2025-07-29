@@ -424,7 +424,7 @@ object-fit: cover;        /* 保持视频宽高比并填充容器 :contentRefere
     display: flex;
     justify-content: center;
   }
-  
+
   .image-carousel .img-container {
     background: #f9f9f9;
     padding: 5px;

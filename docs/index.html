@@ -44,9 +44,8 @@
 
   <div class="container">
 
-    <section class="video-carousel swiper">
+    <!-- <section class="video-carousel swiper">
       <div class="swiper-wrapper">
-        <!-- 每个 slide 放一个 <video> 标签，可按需复制 -->
         <div class="swiper-slide">
           <video src="./video/video1.mp4" controls muted loop defaultPlaybackRate="3.0" autoplay></video>
         </div>
@@ -65,17 +64,12 @@
         <div class="swiper-slide">
           <video src="./video/video2.mp4" controls muted loop defaultPlaybackRate="3.0" autoplay></video>
         </div>
-        <!-- <div class="swiper-slide">
-          <video src="./videos/video3.mp4" controls muted loop></video>
-        </div> -->
       </div>
-  
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
-      <!-- 如果需要前后翻页按钮 -->
+
+
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-    </section>
+    </section> -->
 
 
     <div class="section" id="overview">
@@ -496,8 +490,38 @@
         </li>
         <li>
           <strong>Claw:</strong>
-          At grasp start, the box must sit at least 0.1 m above the table, with both wrists within 0.1 m of the box surface;
+          At claw start, the box must sit at least 0.1 m above the table, with both wrists within 0.1 m of the box surface;
           After placement, the box’s center of mass must be within 0.1 m of the target and maintain that for at least 0.5 s.
+          <section class="image-carousel swiper">
+            <div class="swiper-wrapper">
+              <!-- 每个 slide 放一个 img 和 caption -->
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/claw/claw1.jpg" alt="claw1.jpg">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/claw/claw2.jpg" alt="claw2.jpg">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/claw/claw1.jpg" alt="claw1.jpg">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img-container">
+                  <img src="./img/tasks/claw/claw2.jpg" alt="claw2.jpg">
+                </div>
+              </div>
+
+            </div>
+          
+            <!-- 导航按钮（可选） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </section> 
         </li>
       </ol>
     </div>
@@ -613,7 +637,7 @@
         depth: 100,
         modifier: 2.5,
         slideShadows: false,
-        scale: 0.8,
+        scale: 1.0,
       },
       autoplay: {
         delay: 5000,
