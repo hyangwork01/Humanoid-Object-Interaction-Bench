@@ -364,7 +364,7 @@ object-fit: cover;        /* 保持视频宽高比并填充容器 :contentRefere
 }
 
 /* 1. 强制 Organizers 卡片为垂直居中布局 */
-#reorganizers .people a {
+#organizers .people a {
     display: flex;              /* 激活 flex 布局 */
     flex-direction: column;     /* 垂直堆叠子元素 */
     align-items: center;        /* 水平居中子元素 */
@@ -372,7 +372,7 @@ object-fit: cover;        /* 保持视频宽高比并填充容器 :contentRefere
   }
 /* Organizers：放大到 160×160px，覆盖全局 img 规则 */
 /* 2. 放大 Organizers 头像为 160×160 正圆，覆盖全局 img 规则 */
-#reorganizers .people a img {
+#organizers .people a img {
     width: 160px !important;
     height: 160px !important;
     max-width: none !important;    /* 取消任何 max-width 限制 */
@@ -398,3 +398,18 @@ object-fit: cover;        /* 保持视频宽高比并填充容器 :contentRefere
     border-radius: 50%;
     margin-bottom: 0.5rem;
   }
+
+/* 1. .subsection 容器自身的上下外边距 */
+.subsection {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* 2. .highlight-box（Registration template 那块灰底框）的样式 */
+.highlight-box {
+    border-radius: 0.5em;
+    background-color: #f8f8f8;
+    border-left: 4px solid #4285f4;
+    padding: 15px;
+    margin: 20px 0;
+}

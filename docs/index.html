@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Scenarios Humanoid Locomotion Workshop @ICCV2025</title>
+  <title>Humanoid–Object Interaction Workshop @ICCV2025</title>
   <link rel="stylesheet" href="./css/style.css">
   <link
   rel="stylesheet"
@@ -17,10 +17,15 @@
     <div class="nav-container">
       <img src="./img/iccv-navbar-logo.svg" alt="ICCV Logo" style="margin-top: 0px; border-radius: 0px; position: absolute; left: 1em; max-height: 40px;">
       <a href="#">Home</a>
-      <a href="#intro">Introduction</a>
-      <a href="#OpenSources">Open Sources</a>
+      <a href="#overview">Overview</a>
+      <a href="#participation">Participation</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#opensources">Open Sources</a>
+      <a href="#tasks">Tasks</a>
       <a href="#rules">Rules</a>
-      <a href="#tracks">Tracks</a>
+      <!-- <a href="#organizers">Organizers</a>
+      <a href="#sponsors">Sponsors</a> -->
+
       <!-- <a href="#call">Call for Papers</a> -->
     </div>
   </div>
@@ -29,31 +34,15 @@
   <div class="title-container">
     <div class="overlay"></div>
     <div class="content" style="text-align: center; margin: 20px">
-      <h1>Humanoid–Object Interaction Challenge in Human-Robot-Scene Interaction and Collaboration</h1>
+      <h1>Humanoid–Object Interaction Challenge</h1>
       <div class="subtitle">
-        <a href="https://iccv.thecvf.com/">ICCV 2025</a> Workshop
+        ICCV 2025 Workshop on <a href="https://human-robot-scene.github.io/">Human-Robot-Scene Interaction and Collaboration</a>
       </div>
-      <div class="subtitle">Oct 20th (Afternoon), 2025</div>
-      <div class="subtitle">Honolulu, Hawai'i</div>
     </div>
   </div>
 
 
   <div class="container">
-
-    <div class="section" id="intro">
-      <h2>Introduction</h2>
-      <p>In the real world, robots must not only navigate autonomously but also perceive, manipulate, and interact with objects around them, collaborate effectively with humans, and adapt to dynamic scene layouts. This human–object interaction ability—grounded in physical contact, motion understanding, and environmental awareness—is central to the next generation of robotic perception and control systems.</p>
-      <p>To transition robots from controlled laboratory settings into real-world indoor environments, they must be capable of reliably and safely recognizing, grasping, transporting, and interacting with diverse objects of varying shapes, materials, and semantics—ultimately becoming intelligent and helpful collaborators in daily human life.</p>
-      <p>As a key component of the <a href="https://human-robot-scene.github.io/">Human–Robot–Scene Interaction and Collaboration Workshop @ICCV2025</a>, this Humanoid–Object Interaction Challenge aims to drive innovation and benchmark progress in this essential capability. We provide a simulation-ready 3D object dataset, a real-robot testing platform, and open-source perception and control baselines—empowering participants to develop more intelligent and robust interactive humanoid agents.</p>
-      <p>Our challenge focuses on breakthroughs in the following core capabilities:</p>
-      <ul>
-        <li><strong>Interactive Perception &amp; Tracking</strong>: Achieve high-precision perception, contact detection, and motion tracking of humanoid–object interactions under occlusion and clutter in realistic home environments.</li>
-        <li><strong>Object-Centric Interaction Reasoning</strong>: Learn to use object semantics and contextual affordances to guide multi-step interaction sequences that are natural, purposeful, and temporally coherent.</li>
-        <li><strong>Adaptive Task Execution with Static Objects</strong>: Perceive and interact with static objects (e.g., fixed furniture, wall‑mounted controls, immovable appliances), planning and adjusting manipulation strategies in real time to accomplish interaction tasks robustly and reliably.</li>
-      </ul>
-      <p>Through unified data formats, standardized evaluation metrics, and open baselines, the challenge promotes the development of generalizable, sim-to-real transferable humanoid agents capable of socially intelligent interaction in future home, service, and collaborative environments.</p>
-    </div>
 
     <section class="video-carousel swiper">
       <div class="swiper-wrapper">
@@ -88,7 +77,159 @@
       <div class="swiper-button-next"></div>
     </section>
 
-    <div class="section" id="OpenSources">
+
+    <div class="section" id="overview">
+      <h2>Overview</h2>
+      <p>
+        The <em>Humanoid–Object Interaction Challenge</em> tasks participants with endowing simulated humanoid agents with the ability to perceive, reason about, and physically interact with everyday objects in realistic indoor scenes. Unlike pure locomotion benchmarks, here agents must combine contact‐rich manipulation, interactive perception, and semantic reasoning to complete high‑level tasks such as lying on a bed, pushing a fridge, picking up a box, and sitting on a chair.
+      </p>
+      <p>
+        <b>Leveraging the Isaac Lab simulation platform and our open‑source HOIBench codebase, participants will develop HOI interaction strategies that enable humanoid robots to perform tasks such as lying on a bed, lifting a box, and touching objects.</b> The competition provides standardized robots and scenario imports, allowing you to focus on designing advanced HOI interaction strategies.
+      </p>
+    
+      <h3>Challenge Objectives</h3>
+      <p>Participants will be evaluated on two complementary axes:</p>
+      <ol>
+        <li>
+          <strong>Maximize Task Success Rate</strong> – percentage of trials in which the humanoid completes the specified interaction (e.g. lifts the box by ≥0.2 m, sits stably for ≥0.3 s).
+        </li>
+        <li>
+          <strong>Minimize completion time</strong> – perform each interaction (e.g. sit, lie, lift) as quickly as possible
+        </li>
+      </ol>
+      <p>
+        A composite leaderboard score will combine these metrics, rewarding both robust success and elegant, human‑like manipulation behaviors.
+      </p>
+    </div>
+    
+
+    <div class="section" id="participation">
+      <h2>Participation</h2>
+
+      <div class="subsection">
+        <h3>Registration</h3>
+        <p>All participant teams need to register by emailing <b style="color: green;">xxx@outlook.com</b> with team information. You will recieve an unique token for evaluating your solution.</p>
+        <div class="highlight-box">
+          <strong>Registration template</strong>
+          <p><i>Subject</i>: [ICCV2025-HRSIC]Humanoid–Object Interaction Registration</p>
+          <p><i>Body</i>:<br>
+            Here is our registration information:<br>
+            [Team Name], [Team Leader/Point of Contact], [Primary Contact Email]<br>
+            1. [Team Member 1], [Affiliation]<br>
+            2. [Team Member 2], [Affiliation]<br>
+            ...<br>
+            Whether to open-source the code (for awards): [Yes/No]<br>
+            Additional comments: [Any additional information or questions]
+          </p>
+        </div>
+        <p>If you have any questions, feel free to reach out! We may also send updates regarding the challenge to registered teams.</p>
+      </div>
+
+      <div class="subsection">
+        <h3>Submission</h3>
+        <p>We innovatively utilize a client-server architecture for policy evaluation. The server hosts the simulated evaluation environments, while clients evaluate their policies via our provided REST API. The REST API is designed to have the same interface as <strong>Isaac Lab</strong>, e.g., <code>env.reset()</code> and <code>env.step(action)</code>. Thus no modifications are needed for existing gym-compatible policies. The results will be shown on the public leaderboard.</p>
+        <p>Please refer to <a href="https://github.com/CurMack/HOIBench">our challenge repo</a> for more details. The REST API will be available soon. <strong style="color: red">Stay tuned!</strong></p>
+      </div>
+
+      <div class="subsection">
+        <h3>Important Dates</h3>
+        <ul>
+          <li><strong>Registration Deadline:</strong> September 14, 2025</li>
+          <li><strong>Submission Deadline:</strong> September 21, 2025</li>
+          <li><strong>Winners Announcement:</strong> September 23, 2025</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3><b style="color: red">🏆 Awards</b></h3>
+        <p>
+          🥇 First Prize ($xxx) 🥈 Second Prize ($xxx) 🥉 Third Prize ($xxx)
+        </p>
+        <div class="highlight-box">
+          <b>Participants need to open-source their code to be eligible for awards.</b> However, you can still participate in the challenge without open-sourcing your code. If you want to change your initial response regarding open-sourcing your code, please contact us.
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="evaluation">
+      <h2>Evaluation</h2>
+
+      <div class="subsection">
+        <h3>Policy Specifications</h3>
+        <p>Your policy must process standardized observations and output specific control signals.</p>
+
+        <h4><b>Input (Observation Space)</b></h4>
+        <p>The policy will receive the following observations at each timestep:</p>
+        <ul>
+          <li>Joint positions and velocities ([joint_details])</li>
+          <li>Base orientation and angular velocity ([base_orientation_details])</li>
+          <li>Terrain height samples around the robot ([obj_obs])</li>
+          <li>Previous action values ([action_history_details])</li>
+        </ul>
+        <p>Complete observation specifications will be provided in <a href="https://github.com/CurMack/HOIBench">our challenge repo</a>. <strong style="color: red">Stay tuned!</strong></p>
+
+        <h4><b>Output (Action Space)</b></h4>
+        <p>Your policy must output:</p>
+        <ul>
+          <li>Target joint positions ([joint_target_details])</li>
+        </ul>
+        <div class="highlight-box">
+          <strong>Note:</strong> Your policy must align with the provided observation space.
+          <!-- We recommend using distillation if you've trained with customized observations. -->
+        </div>
+      </div>
+      
+      <div class="subsection">
+        <h3>Robots</h3>
+        <p>There are 3 robots available for the challenge:</p>
+        <ul>
+          <li>Unitree G1</li>
+          <li>Unitree H1</li>
+          <li>SMPL Humanoid</li>
+          <!-- <li>Fourier N1</li> -->
+        </ul>
+        You can start with any robot to participate in the challenge. To encourage the development of general algorithms, we will compare the scores across all robots. The more robots your algorithm works on, the higher your score will be.
+      </div>
+
+      <h3>Test Tasks</h3>
+      <p>Policies will be evaluated on these specialized tasks:</p>
+      <ol>
+        <li>
+          <strong>Robustness Evaluation:</strong>
+          To assess the agent’s stability under <b>external force perturbations</b> of varying magnitude and direction, we introduce random pushes during task execution. Successful policies must maintain contact and complete the interaction (e.g., lie, push, lift, sit) despite these unexpected disturbances.(Task weight = xxx)
+        </li>
+        <li>
+          <strong>Generalization Evaluation:</strong>
+          To measure adaptability, agents are tested on <b>previously unseen object instances</b> from the same category. This ensures the policy can coherently interact with new bed, box, or chair models without any additional fine‑tuning.(Task weight = xxx)
+        </li>
+
+      </ol>
+      
+      <h3>Scoring Metric</h3>
+      <p>Performance is measured using a weighted combination of:</p>
+      <ul>
+        <li><strong>Success Rate</strong> — the percentage of tasks completed successfully</li>
+        <li><strong>Efficiency Score (weight = 0.1)</strong>: Timesteps normalized by completion percentage</li>
+      </ul>
+      
+      <h4>Scoring Formula</h4>
+      <div style="color: gray;"><strong>Score Metric Keep Tuned!</strong></div>
+      <p>Task Score = ( (Success Rate ) × 0.9 + (1 -  Efficiency Score) × 0.1) * (Task weight)</p>
+      
+      <div class="highlight-box">
+        <strong>Example Calculation:</strong><br>
+
+        If a robot gets 60% Success Rate and 40% Completion Rate of a task in Robustness Evaluation with 500 timesteps:<br>
+        The baseline finished the Robustness Evaluation used 400 timesteps<br>
+        Task Score = (60 * 0.9 + (100-60) * 0.1)* 0.8 = 57.2<br>
+
+      </div>
+      
+      <p>Full evaluation details and reference times will be published in the starter kit.</p>
+
+    </div>
+
+    <div class="section" id="opensources">
       <h2>Open Source</h2>
       <p>
         <!-- Our Open-source Terrain Benchmark is accessible in <a href="https://github.com/shiki-ta/Humanoid-Terrain-Bench">this repository</a>. You are required to use this repository to participate in the challenge using whichever robot you have, by default we provided Unitree H1_2、G1 and Fourier GR1T2 training code in Isaac Gym. Customized robots are also welcome, as long as they can be trained in Isaac Gym, but you may provide the Isaac Gym deploy config. -->
@@ -99,7 +240,6 @@
         <li><a href="https://drive.google.com/file/d/1mgHx_btvx3RCnA_3CYdAAl_5_qKf5jzs/view?usp=sharing">Object Datasets</a>: A diverse set of objects available in Isaac Lab, including bed,sofa,chair,box and more.</li>
         <li><a href="https://github.com/CurMack/HOIBench">Training Platform</a>: A foundational training platform for developing and testing Humanoid Object Interaction policies.</li>
         <li><a href="https://github.com/CurMack/HOIBench/blob/master/README.md">Documentation</a>: Comprehensive documentation to guide participants in using the benchmark effectively.</li>
-        <li>Evaluation Metrics: Standardized metrics for assessing interaction performance across different tasks.</li>
       </ul>
       <h3>Reference Papers</h3>
         <ul>
@@ -111,52 +251,10 @@
         </ul>
     </div>
 
-    <div class="section" id="rules">
-      <h2>Rules</h2>
-      <ol>
-        <li><strong>Eligibility:</strong> Participation is open to academic, industry, and independent teams worldwide. Each team may submit only one entry.</li>
-        <li><strong>Robot Requirements:</strong> You may use any simulated humanoid robot compatible with Isaac Lab. Default support is provided for Unitree H1_2, G1, and SMPL Humanoid. Custom robots are welcome but must include deployment configs for Isaac Lab and contact the organizer in advance to adapt the code properly.</li>
-        <li><strong>Submission:</strong> Teams must submit both their trained locomotion policy and the model inference code according to the provided submission guidelines. All entries must be reproducible.</li>
-        <li><strong>Evaluation:</strong> All policies will be tested on a standardized home‑scene dataset, with performance measured by task completion rate and success rate across tasks of varying difficulty. Under equal conditions, faster approaches are preferred</li>
-        <li><strong>Fair Play:</strong> Use of cheating techniques, hard-coding the test environment, or exploiting simulator bugs is strictly prohibited.</li>
-        <li><strong>Final Decisions:</strong> The organizing committee reserves the right to make final decisions regarding rule interpretation and winner selection.</li>
-      </ol>
-    </div>
 
 
-    <div class="section" id="tracks">
-      <h2>Tracks</h2>
-      <p>We design vary interaction tasks  to evaluate the robot’s performance. All evaluation scenarios are drawn from the provided object dataset.</p>
 
-      <ol>
-        <li>
-          <strong>Robustness Evaluation:</strong> To assess the robot’s robustness under physical disturbances, we test task execution performance when applying <b>external force perturbations</b> of varying magnitude and direction. This evaluation examines whether the robot can maintain stable interaction and complete tasks despite unexpected physical pushes or disturbances.
-          <!-- <div class="img-container">
-            <img src="./img/single-obj-scene.png" alt="single-obj-scene for Robustness evaluation">
-            <div class="caption">Simple scene interaction for Robustness evaluation</div>
-          </div> 
-          <div class="img-container">
-            <img src="./img/multi-obj-scene.png" alt="multi-obj-scene for Robustness evaluation">
-            <div class="caption">Multi scene interaction for Robustness evaluation</div>
-          </div> -->
-        </li>
-        
-        <!-- <li>
-          <strong>Extreme Evaluation:</strong> To assess the upper limits of locomotion strategies, we conduct extreme terrain evaluations. For example, the height of stairs will be set significantly higher than in typical scenarios. These challenging conditions are designed to test the maximal capability of the trained humanoid policies, revealing potential failure modes and identifying areas for further improvement.
-          <div class="img-container">
-            <img src="./img/Extreme.png" alt="Stair for Extreme evaluation">
-            <div class="caption">Stair terrain for Extreme evaluation</div>
-          </div>
-        </li> -->
-
-        <li>
-          <strong>Generalization Evaluation:</strong> To evaluate the robot’s ability to generalize across object instances, we assess its interaction performance on <b>previously unseen objects of the same category</b>. This tests whether the model can adaptively and coherently interact with new object instances within the learned category, without retraining or fine-tuning.
-        </li>
-      </ol>
-    </div>  
-
-
-    <div class="section" id="tracks">
+    <div class="section" id="tasks">
       <h2>Tasks</h2>
       <p>The Humanoid–Object Interaction Challenge defines the following six interaction tasks, with success criteria for each:</p>
 
@@ -193,9 +291,19 @@
         </li>
       </ol>
     </div>
-    
-    <div class="section" id="reorganizers">
-      <h2>organizers</h2>
+    <div class="section" id="rules">
+      <h2>Rules</h2>
+      <ol>
+        <li><strong>Eligibility:</strong> Participation is open to academic, industry, and independent teams worldwide. Each team may submit only one entry.</li>
+        <li><strong>Robot Requirements:</strong> You may use any simulated humanoid robot compatible with Isaac Lab. Default support is provided for Unitree H1_2, G1, and SMPL Humanoid. Custom robots are welcome but must include deployment configs for Isaac Lab and contact the organizer in advance to adapt the code properly.</li>
+        <li><strong>Submission:</strong> Teams must submit both their trained HOI policy and the model inference code according to the provided submission guidelines. All entries must be reproducible.</li>
+        <li><strong>Evaluation:</strong> All policies will be evaluated based on the percentage of tasks successfully completed and the time taken to complete them, with faster completions receiving higher scores.</li>
+        <li><strong>Fair Play:</strong> Use of cheating techniques, hard-coding the test environment, or exploiting simulator bugs is strictly prohibited.</li>
+        <li><strong>Final Decisions:</strong> The organizing committee reserves the right to make final decisions regarding rule interpretation and winner selection.</li>
+      </ol>
+    </div>
+    <div class="section" id="organizers">
+      <h2>Organizers</h2>
       <div class="people">
         <a href="https://reorg1.example.com" target="_blank">
           <img src="./img/chair_mo005_chair_04.png" alt="organizer 1">
