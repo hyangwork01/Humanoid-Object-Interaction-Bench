@@ -4,12 +4,6 @@ html{
     scroll-behavior:smooth;
 }
 
-img {
-    border-radius: 10px; /* 设置圆角半径为20px */
-    max-width:90%;
-    height:auto;
-    margin-top: 20px;
-}
 
 body {
     margin: 0;
@@ -72,7 +66,7 @@ h3 {
     background: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     h1 {
         font-weight: 400;
         font-size: 1.5em;
@@ -346,6 +340,13 @@ h1 {
 }
 }
 
+img {
+    border-radius: 10px; /* 设置圆角半径为20px */
+    max-width:90%;
+    height:auto;
+    margin-top: 20px;
+}
+
 .video-carousel {
     width: 100%;
     max-height: 800px;        /* 根据需要调整整体高度 */
@@ -363,41 +364,6 @@ height: auto;
 object-fit: cover;        /* 保持视频宽高比并填充容器 :contentReference[oaicite:9]{index=9} */
 }
 
-/* 1. 强制 Organizers 卡片为垂直居中布局 */
-#organizers .people a {
-    display: flex;              /* 激活 flex 布局 */
-    flex-direction: column;     /* 垂直堆叠子元素 */
-    align-items: center;        /* 水平居中子元素 */
-    text-align: center;         /* 文字在多行时也居中 */
-  }
-/* Organizers：放大到 160×160px，覆盖全局 img 规则 */
-/* 2. 放大 Organizers 头像为 160×160 正圆，覆盖全局 img 规则 */
-#organizers .people a img {
-    width: 160px !important;
-    height: 160px !important;
-    max-width: none !important;    /* 取消任何 max-width 限制 */
-    object-fit: cover;             /* 中心裁剪填满圆形 */
-    border-radius: 50%;            /* 正圆 */
-    margin-bottom: 0.5rem;         /* 头像与文字间距 */
-  }
-  
-  
-  
-/* 3. 同样处理 Sponsors 区块（如果 Sponsors 也要圆形头像/Logo）*/
-#sponsors .people a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  #sponsors .people a img {
-    width: 160px !important;
-    height: 160px !important;
-    max-width: none !important;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-  }
 
 /* 1. .subsection 容器自身的上下外边距 */
 .subsection {
@@ -439,9 +405,45 @@ object-fit: cover;        /* 保持视频宽高比并填充容器 :contentRefere
   }
   
 
-.sponsor-logo {
-width: 150px !important;
-height: auto !important;
-display: block;   /* 如果你想让它独占一行 */
-margin: 5px 0;/* 上下 20px 居中 */
-}
+  .sponsor-logo {
+    width: 150px !important;
+    height: auto !important;
+    display: block;   /* 如果你想让它独占一行 */
+    margin: 5px 0;/* 上下 20px 居中 */
+    }
+    
+    /* 1. 强制 Organizers 卡片为垂直居中布局 */
+    #organizers .people a {
+        display: flex;              /* 激活 flex 布局 */
+        flex-direction: column;     /* 垂直堆叠子元素 */
+        align-items: center;        /* 水平居中子元素 */
+        text-align: center;         /* 文字在多行时也居中 */
+      }
+    /* Organizers：放大到 160×160px，覆盖全局 img 规则 */
+    /* 2. 放大 Organizers 头像为 160×160 正圆，覆盖全局 img 规则 */
+    #organizers .people a img {
+        width: 140px !important;
+        height: 140px !important;
+        max-width: none !important;    /* 取消任何 max-width 限制 */
+        object-fit: cover;             /* 中心裁剪填满圆形 */
+        border-radius: 50%;            /* 正圆 */
+        margin-bottom: 0.5rem;         /* 头像与文字间距 */
+      }
+      
+      
+      
+    /* 3. 同样处理 Sponsors 区块（如果 Sponsors 也要圆形头像/Logo）*/
+    #sponsors .people a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      #sponsors .people a img {
+        width: 160px !important;
+        height: 160px !important;
+        max-width: none !important;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 0.5rem;
+      }
